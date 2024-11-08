@@ -1,0 +1,27 @@
+.mouse-effect {
+  position: fixed;
+  width: 15px;
+  height: 15px; 
+  background-color: rgb(143, 197, 255);
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 0px 20px 5px rgb(0, 21, 255);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+body {
+  cursor: none;
+}

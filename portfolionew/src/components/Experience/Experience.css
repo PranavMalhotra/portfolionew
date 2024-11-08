@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #c2c2c2;
+  color: #222222;
+  line-height: 1.6;
+}
+
+.expmain-container {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fffffff0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.experience-heading {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.education-timeline {
+  background-color: #f5fff6;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+}
+
+
+.education-content {
+  height: 100%;
+  flex: 1 1 calc(50% - 20px);
+  border-left: 4px solid #009B77;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;       
+}
+
+.job-timeline {
+  background-color: #f6fafe;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.job-content {
+  height: 100%;
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 4px solid #2080ff;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.timeline-item {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  width: 100%;
+  opacity: 0;
+  border-radius: 12px;
+  animation: fadeIn 0.7s forwards;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.timeline-item .left {
+  flex-direction: row-reverse;
+}
+
+.timeline-item .right {
+  flex-direction: row;
+}
+
+.timeline-content {
+  background-color: #F0F0F0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.timeline-content:hover {
+  background-color: #bed3e0b0;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.timeline-content h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #6A7B9D;
+}
+
+.timeline-content h4 {
+  font-size: 22px;
+  font-weight: normal;
+  color: #222222;
+  margin-bottom: 12px;
+}
+
+.timeline-content span {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.section-heading{
+  font-size: 2rem;
+}
+
+.education-timeline .timeline-item span {
+  color: #009B77;
+}
+
+.job-timeline .timeline-item span {
+  color: #2080ff;
+}
+
+.job-timeline .timeline-item button{
+  background-color: #2080ff;
+}
+
+.timeline-content p {
+  font-size: 18px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.education-timeline button {
+  background-color: #009B77;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.job-timeline button {
+  background-color: #009B77;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.timeline-content button:hover {
+  background-color: #FFD54F;
+  transform: scale(1.05);
+}
+
+.more-details {
+  background-color: #FFFFF0;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 15px;
+  animation: slideDown 0.4s ease;
+  color: #222222;
+}
+.more-details ul {
+  padding-left: 20px;
+  font-size: 1rem;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+.more-details p {
+  margin: 0;
+  color: #222222;
+  line-height: 1.6;
+}
+
+.expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-item:hover {
+  background-color: #FFFFF0;
+}
+
+@media (max-width: 1200px) {
+
+  .experience-heading {
+    font-size: 36px;
+  }
+
+  .education-timeline {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .education-content {
+    flex: 1 1 calc(50% - 15px);
+    padding: 15px;
+  }
+
+  .job-timeline {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .job-content {
+    flex: 1 1 calc(50% - 15px);
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-content h3 {
+    font-size: 24px;
+  }
+
+  .timeline-content h4 {
+    font-size: 20px;
+  }
+
+  .timeline-content p {
+    font-size: 16px;
+  }
+
+  .timeline-content h3,
+  .timeline-content h4,
+  .timeline-content span,
+  .timeline-content p {
+    text-align: center;
+  }
+
+  .education-timeline {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .education-content {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    border-left: none;
+    border-top: 4px solid #009B77;
+    padding: 15px;
+  }
+
+  .job-timeline {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .job-content {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    border-left: none;
+    border-top: 4px solid #2080ff;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-heading {
+    font-size: 32px;
+  }
+
+  .timeline-content h3 {
+    font-size: 22px;
+  }
+
+  .timeline-content h4 {
+    font-size: 18px;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+  }
+
+  .timeline-item {
+    margin-bottom: 40px; 
+  }
+}
+
+
+* {
+  transition: all 0.3s ease;
+}
+
+a {
+  color: #6A7B9D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+}
+
+button:focus,
+a:focus {
+  outline: 2px dashed #6A7B9D;
+  outline-offset: 2px;
+}
+
+
