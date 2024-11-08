@@ -57,7 +57,7 @@ const Home = () => {
         <div className="icon-row">
           <div className="icon-wrapper document-icon">
             <a
-              href="/Pranav_Malhotra_Resume.pdf"
+              href="/portfolionew/Pranav_Malhotra_Resume.pdf"
               download
               aria-label="Download Resume"
             >
@@ -67,7 +67,7 @@ const Home = () => {
 
           <div className="profile-picture">
             <img
-              src="/IMG_6789.png"
+              src="/portfolionew/IMG_6789.png"
               alt="Profile of Pranav"
             />
           </div>
@@ -117,7 +117,7 @@ const Home = () => {
         loop
         style={{border: "1px solid rgba(0, 0, 0, 0.1)" }}
       >
-        <source src="/CardVideo.mov" type="video/mp4" />
+        <source src="/portfolionew/CardVideo.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </section>
